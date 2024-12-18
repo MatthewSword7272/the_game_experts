@@ -4,8 +4,8 @@ import {UnderlinedText} from './UnderlineText'
 interface SubMenuItemProps {
     item: {
         name: string
-        link?: string
-        subItems?: Array<{name: string; link: string}>
+        link?: string | false
+        subItems?: Array<{name: string; link: string}> | false
     }
     activeSubMenu: string | null
     setActiveSubMenu: (name: string | null) => void
@@ -15,7 +15,7 @@ export const SubMenuItem = ({item, activeSubMenu, setActiveSubMenu}: SubMenuItem
     if (!item.subItems) {
         return (
             <MenuItem>
-                <a className="hover:text-blue-600 group w-full" href={item.link}>
+                <a className="hover:text-blue-600 group w-full" href={item.link ? item.link : '#'}>
                     <UnderlinedText text={item.name} isHover />
                 </a>
             </MenuItem>

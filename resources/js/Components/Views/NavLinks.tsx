@@ -1,5 +1,5 @@
 import {navigationMenu} from '@/data/headerDropDowns'
-import {Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/react'
+import {Menu, MenuButton, MenuItems} from '@headlessui/react'
 import {useState} from 'react'
 import {UnderlinedText} from '../ui/UnderlineText'
 import {SubMenuItem} from '../ui/SubMenuItem'
@@ -23,7 +23,11 @@ export default function NavLinks({onMenuHover}: NavLinksProps) {
     }
 
     return (
-        <div className={'flex items-center justify-start w-full text-sm font-semibold gap-x-[34px] whitespace-nowrap flex-wrap'}>
+        <div
+            className={
+                'lg:flex hidden items-center justify-start w-full text-sm font-semibold gap-x-[34px] whitespace-nowrap flex-wrap'
+            }
+        >
             {navigationMenu.map((item) => (
                 <Menu
                     key={item.name}
@@ -33,7 +37,7 @@ export default function NavLinks({onMenuHover}: NavLinksProps) {
                     onMouseLeave={handleMouseLeave}
                 >
                     <MenuButton>
-                        <UnderlinedText text={item.name} isActive={activeMenu === item.name} />
+                        <UnderlinedText text={item.name} isActive={activeMenu === item.name} isHover={false} />
                     </MenuButton>
                     <MenuItems
                         className="absolute whitespace-nowrap w-60 gap-y-3 flex flex-col top-7 -left-1 bg-white border font-normal text-base py-5 pl-4"
