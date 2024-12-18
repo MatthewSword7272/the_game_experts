@@ -30,13 +30,13 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
                 />
                 {/* Header on Scroll */}
                 <div
-                    className={`fixed top-0 left-0 right-0 bg-white mx-auto shadow-md transition-transform duration-300 z-30 ${
+                    className={`fixed top-0 left-0 right-0 bg-white mx-auto shadow-md transition-transform duration-300 ${
                         isScrolled ? 'translate-y-0' : '-translate-y-full'
                     }`}
                 >
                     <Header onMenuHover={setIsMenuHovered} links={false} />
                 </div>
-                <div className="container mx-auto h-screen w-full relative bg-white z-20">
+                <div className="container mx-auto h-screen w-full relative bg-white">
                     <Header onMenuHover={setIsMenuHovered} links={true} />
                     <div></div>
                     <Footer />
