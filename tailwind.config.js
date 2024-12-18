@@ -1,5 +1,5 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
+import defaultTheme from 'tailwindcss/defaultTheme'
+import forms from '@tailwindcss/forms'
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -12,11 +12,25 @@ export default {
 
     theme: {
         extend: {
+            backgroundImage: {
+                hero: "url('https://thegameexperts.com.au/cdn/shop/t/10/assets/body_bg_image.jpg?v=34183979267387787271641438928')",
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Barlow', 'Times New Roman', ...defaultTheme.fontFamily.sans],
+            },
+            maxWidth: {
+                maxW: '76.25rem',
+            },
+            backgroundColor: {
+                search: '#e6e6e6',
+            },
+            colors: {
+                blue: {
+                    600: '#1477c6',
+                },
             },
         },
     },
 
     plugins: [forms],
-};
+}
