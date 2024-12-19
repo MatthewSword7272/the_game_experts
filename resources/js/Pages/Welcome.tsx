@@ -78,29 +78,24 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
                 </div>
                 <div className="container mx-auto h-full w-full relative bg-white xl:max-w-maxW">
                     <Header onMenuHover={setIsMenuHovered} links={true} />
-                    <div className="grid grid-cols-12 gap-4 p-4 min-h-screen">
-                        {/* Large hero card - spans 8 columns */}
-                        <div className="col-span-8 flex flex-col gap-4">
-                            <div className="h-2/3">
+                    <div className="grid lg:grid-cols-3 gap-4 p-4">
+                        {/* Left column - large cards */}
+                        <div className="lg:col-span-2 flex flex-col gap-4">
+                            <div className="relative aspect-video">
                                 <HeroCard {...heroCards[0]} className="h-full text-7xl" />
                             </div>
-                            {/* Medium collectibles card - spans 6 columns */}
-                            <div className="h-1/3">
+                            <div className="relative aspect-[7/2]">
                                 <HeroCard {...heroCards[1]} className="h-full text-5xl" />
                             </div>
                         </div>
-                        {/* Smaller card - spans 4 columns */}
-                        <div className={'col-span-4 flex flex-col gap-4 h-full'}>
-                            <div className="col-span-1 h-1/3">
-                                <HeroCard {...heroCards[2]} className="h-full text-3xl" />
-                            </div>
-                            {/* Two smaller cards - span 3 columns each */}
-                            <div className="col-span-1 h-1/3">
-                                <HeroCard {...heroCards[3]} className="h-full text-3xl" />
-                            </div>
-                            <div className="col-span-1 h-1/3">
-                                <HeroCard {...heroCards[4]} className="h-full text-3xl" />
-                            </div>
+
+                        {/* Right column - smaller cards */}
+                        <div className="flex flex-col gap-4">
+                            {heroCards.slice(2).map((card, index) => (
+                                <div key={index} className="relative aspect-video">
+                                    <HeroCard {...card} className="h-full text-3xl" />
+                                </div>
+                            ))}
                         </div>
                     </div>
                     <Footer />
