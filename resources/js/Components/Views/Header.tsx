@@ -15,7 +15,7 @@ export default function Header({onMenuHover, links}: HeaderProps) {
     const [search, setSearch] = useState('')
 
     return (
-        <header className="flex items-center px-4 container flex-col gap-y-4 bg-white relative w-full py-4 z-20">
+        <header className="flex items-center px-4 flex-col gap-y-4 bg-white relative w-full py-4 z-20">
             <div className="flex items-center justify-between py-[1.125rem] w-full">
                 <Popover as="div" className="relative lg:hidden">
                     {({open}) => (
