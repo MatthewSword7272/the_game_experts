@@ -7,5 +7,11 @@ export default function StyledButton({text, id}: {text: string; id: number}) {
         }
     }
 
-    return <button className={`${buttonColour()} text-base font-bold py-2 px-8 uppercase hover:underline`}>{text}</button>
+    return (
+        <button
+            className={`${buttonColour()} lg:text-base text-sm font-bold p-1 lg:py-2 lg:px-8 uppercase hover:underline whitespace-nowrap`}
+        >
+            {text}
+        </button>
+    )
 }
