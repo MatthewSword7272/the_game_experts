@@ -93,3 +93,12 @@
     font-weight: 900;
     font-style: italic;
 }
+
+.slick-prev::before,
+.slick-next::before {
+    padding: 0.9375rem;
+    background-color: #1477c6 !important;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
