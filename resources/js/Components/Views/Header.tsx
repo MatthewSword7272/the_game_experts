@@ -33,7 +33,7 @@ export default function Header({onMenuHover, links}: HeaderProps) {
 
                 <SearchBar search={search} setSearch={setSearch} className="w-2/5 hidden lg:block" />
 
-                <CartHeader currency="AUD" />
+                <CartHeader />
             </div>
 
             <SearchBar search={search} setSearch={setSearch} className="w-full lg:hidden block" />
