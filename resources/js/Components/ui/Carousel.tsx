@@ -22,7 +22,7 @@ export default function Carousel({images, items}: CarouselProps) {
         dots: false,
         infinite: false,
         speed: 100,
-        slidesToShow: items,
+        slidesToShow: items - 1,
         slidesToScroll: 1,
         arrows: true,
         easing: 'ease-in-out',
@@ -45,17 +45,7 @@ export default function Carousel({images, items}: CarouselProps) {
             <div className={'lg:flex hidden justify-evenly'}>
                 {images.map((image, index) => (
                     <div key={index} className="">
-                        <img
-                            srcSet={image.srcSet}
-                            sizes="
-                            (min-width: 2048px) 1920px,
-                            (min-width: 1920px) 1366px,
-                            960px,
-
-                         "
-                            alt={image.name}
-                            className="w-full h-full object-contain"
-                        />
+                        <img srcSet={image.srcSet} sizes="960px" alt={image.name} className="w-full h-full object-contain" />
                     </div>
                 ))}
             </div>

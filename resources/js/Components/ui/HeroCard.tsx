@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react'
 import StyledButton from './StyledButton'
 
 interface HeroCardProps {
@@ -6,12 +7,23 @@ interface HeroCardProps {
     link: string
     image: string
     srcSet: string
-    aspectRatio: number
     cardID: number
     className?: string
 }
 
-export default function HeroCard({title, buttonText, link, image, srcSet, aspectRatio, cardID, className}: HeroCardProps) {
+export default function HeroCard({title, buttonText, link, image, srcSet, cardID, className}: HeroCardProps) {
+    // Add state to track aspect ratio
+    const [aspectRatio, setAspectRatio] = useState(16 / 9) // Default aspect ratio
+
+    // Add effect to calculate actual aspect ratio when image loads
+    useEffect(() => {
+        const img = new Image()
+        img.src = image
+        img.onload = () => {
+            setAspectRatio(img.width / img.height)
+        }
+    }, [image])
+
     return (
         <div className={`relative group h-full ${className} text-2xl`}>
             <div className="relative" style={{paddingTop: `${(1 / aspectRatio) * 100}%`}}>
@@ -19,7 +31,6 @@ export default function HeroCard({title, buttonText, link, image, srcSet, aspect
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-in-out md:group-hover:scale-110"
                     src={image}
                     srcSet={srcSet}
-                    sizes="(max-width: 1024px) 100vw, 66vw"
                     alt={title}
                 />
             </div>

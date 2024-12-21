@@ -1,9 +1,10 @@
 import Carousel from '@/Components/ui/Carousel'
+import Heading from '@/Components/ui/Heading'
 import HeroSection from '@/Components/ui/HeroSection'
+import ProductCard from '@/Components/ui/ProductCard'
 import AppLayout from '@/Layouts/AppLayout'
 import {PageProps} from '@/types'
-import {Head} from '@inertiajs/react'
-import {useEffect, useState} from 'react'
+import {Head, Link} from '@inertiajs/react'
 
 export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{laravelVersion: string; phpVersion: string}>) {
     const franchiseImages = [
@@ -56,6 +57,63 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
                 '//thegameexperts.com.au/cdn/shop/files/Super_Mario_2048x.png?v=1617749969 2048w',
         },
     ]
+
+    const newReleases = [
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+        {
+            name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
+            link: '#',
+            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            price: '699.99',
+        },
+    ]
     return (
         <>
             <Head title="Welcome" />
@@ -63,6 +121,14 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
             <AppLayout>
                 <HeroSection />
                 <Carousel images={franchiseImages} items={franchiseImages.length} />
+                <div className="my-10 space-y-4">
+                    <Heading title="New Releases" />
+                    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+                        {newReleases.map((release, index) => (
+                            <ProductCard key={index} {...release} />
+                        ))}
+                    </div>
+                </div>
             </AppLayout>
         </>
     )
