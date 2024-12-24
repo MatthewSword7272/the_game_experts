@@ -1,5 +1,6 @@
 import Carousel from '@/Components/ui/Carousel'
 import Heading from '@/Components/ui/Heading'
+import HeroCard from '@/Components/ui/HeroCard'
 import HeroSection from '@/Components/ui/HeroSection'
 import ProductCard from '@/Components/ui/ProductCard'
 import AppLayout from '@/Layouts/AppLayout'
@@ -63,56 +64,86 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
             image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
             price: '699.99',
         },
+    ]
+
+    const adverts = [
+       {
+        image: 'https://thegameexperts.com.au/cdn/shop/files/Square_images_for_site_1920x.png?v=1613966582',
+        link: "#",
+        buttonText: "Trade In",
+        cardID : 1,
+       },
+       {
+        image: 'https://thegameexperts.com.au/cdn/shop/files/Shop_in_store_set_of_3_1080x.png?v=1613436415',
+        link: "#",
+        buttonText: "Trade In",
+        cardID : 2,
+       },
+       {
+        image: 'https://thegameexperts.com.au/cdn/shop/files/Free_Shipping_set_of_3_b0d3ad8a-9ef3-47cf-a13c-dfcbcd7c92ca_1920x.png?v=1613436510',
+        link: "#",
+        buttonText: "Trade In",
+        cardID : 1,
+       },
     ]
     return (
         <>
@@ -126,6 +157,13 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
                     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
                         {newReleases.map((release, index) => (
                             <ProductCard key={index} {...release} />
+                        ))}
+                    </div>
+                </div>
+                <div className="my-10 pt-10 pb-5 px-5 space-y-4 bg-black">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                        {adverts.map((advert, index) => (
+                            <HeroCard key={index} {...advert} title={false}/>
                         ))}
                     </div>
                 </div>

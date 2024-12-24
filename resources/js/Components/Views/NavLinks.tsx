@@ -25,7 +25,7 @@ export default function NavLinks({onMenuHover}: NavLinksProps) {
     return (
         <div
             className={
-                'lg:flex hidden items-center justify-start w-full text-sm font-semibold gap-x-[34px] whitespace-nowrap flex-wrap'
+                'lg:flex hidden items-center justify-start w-full text-sm font-semibold gap-x-[34px] whitespace-nowrap flex-wrap mt-4'
             }
         >
             {navigationMenu.map((item) => (
