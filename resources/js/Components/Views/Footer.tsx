@@ -60,7 +60,7 @@ export default function Footer() {
     }
 
     return (
-        <footer className="w-full bg-black text-white px-3 overflow-hidden">
+        <footer className="px-3 bg-black text-white overflow-hidden -mx-4 ">
             <div className="pt-20 pb-14">
                 <div className="flex sm:flex-row flex-col items-start justify-between gap-y-5">
                     <div className="w-1/4 gap-y-5 hidden text-sm sm:flex">

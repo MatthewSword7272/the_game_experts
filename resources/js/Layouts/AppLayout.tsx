@@ -37,7 +37,7 @@ export default function AppLayout({children}: {children: React.ReactNode}) {
                 >
                     <Header onMenuHover={setIsMenuHovered} links={false} />
                 </div>
-                <div className="container mx-auto h-full w-full relative bg-white xl:max-w-maxW px-4 ">
+                <div className="container mx-auto h-full w-full relative bg-white xl:max-w-maxW px-4 space-y-7">
                     <Header onMenuHover={setIsMenuHovered} links={true} />
                     {children}
                     <Footer />

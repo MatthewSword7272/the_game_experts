@@ -152,7 +152,7 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
             <AppLayout>
                 <HeroSection />
                 <Carousel images={franchiseImages} items={franchiseImages.length} />
-                <div className="my-10 space-y-4">
+                <div className="space-y-10">
                     <Heading title="New Releases" />
                     <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
                         {newReleases.map((release, index) => (
@@ -160,7 +160,7 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
                         ))}
                     </div>
                 </div>
-                <div className="my-10 pt-10 pb-5 px-5 space-y-4 bg-black">
+                <div className="pt-10 pb-5 px-5 space-y-4 bg-black -mx-4">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                         {adverts.map((advert, index) => (
                             <HeroCard key={index} {...advert} title={false}/>
