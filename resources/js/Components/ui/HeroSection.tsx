@@ -51,14 +51,14 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-3 gap-4 my-4">
             {/* Left column - large cards */}
             <div className="md:col-span-2 flex flex-col gap-4">
-                <HeroCard {...heroCards[0]} className="lg:text-7xl" />
+                <HeroCard {...heroCards[0]} className="lg:text-7xl" variant='center'/>
                 <HeroCard {...heroCards[1]} className="lg:text-4xl" />
             </div>
 
             {/* Right column - smaller cards */}
             <div className="flex flex-col gap-4">
                 {heroCards.slice(2).map((card, index) => (
-                    <HeroCard key={index} {...card} className="lg:text-3xl" />
+                    <HeroCard key={index} {...card} className="lg:text-3xl" variant='center'/>
                 ))}
             </div>
         </div>

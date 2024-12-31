@@ -63,64 +63,82 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                    'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                    'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
         {
             name: 'new Nintendo 2DS XL Black/Turquoise Console Complete In Box',
             link: '#',
-            image: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
-            image2: 'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+            images: [
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9223_1920x.jpg?v=1733543617',
+                'https://thegameexperts.com.au/cdn/shop/files/IMG_9224_1920x.jpg?v=1733543617',
+        ],
             price: '699.99',
         },
     ]
@@ -163,7 +181,7 @@ export default function Welcome({auth, laravelVersion, phpVersion}: PageProps<{l
                 <div className="pt-10 pb-5 px-5 space-y-4 bg-black -mx-4">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                         {adverts.map((advert, index) => (
-                            <HeroCard key={index} {...advert} title={false}/>
+                            <HeroCard key={index} {...advert} title={false} variant='bottom'/>
                         ))}
                     </div>
                 </div>
