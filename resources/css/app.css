@@ -2,121 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-    .slick-prev::before,
-    .slick-next::before {
-      @apply bg-[#1477c6] border border-white p-[0.9375rem];
-    }
-
-    .dialogLeft {
-      @apply z-[3] left-4;
-      &::before {
-        @apply bg-white text-black opacity-100;
-      }
-    }
-
-    .dialogRight {
-      @apply z-[3] right-12;
-      &::before {
-        @apply bg-white text-black opacity-100;
-      }
-    }
-
-
-  }
-
-  .slick-track {
+.slick-track {
     height: fit-content !important;
-  }
-
-
-.barlow-thin {
-    font-weight: 100;
-    font-style: normal;
 }
 
-.barlow-extralight {
-    font-weight: 200;
-    font-style: normal;
+.slick-prev::before,
+.slick-next::before {
+    padding: 1rem;
+    background-color: #1477c6 !important;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
 }
 
-.barlow-light {
-    font-weight: 300;
-    font-style: normal;
+.slick-slider:hover .slick-prev,
+.slick-slider:hover .slick-next {
+    opacity: 1 !important;
 }
 
-.barlow-regular {
-    font-weight: 400;
-    font-style: normal;
+.dialogLeft {
+    opacity: 0 !important;
+    z-index: 3;
+    left: 1rem !important;
+    &::before {
+        background-color: white !important;
+        color: black !important;
+        opacity: 1 !important;
+    }
 }
 
-.barlow-medium {
-    font-weight: 500;
-    font-style: normal;
+.dialogRight {
+    opacity: 0 !important;
+    z-index: 3;
+    right: 3rem !important;
+    &::before {
+        background-color: white !important;
+        color: black !important;
+        opacity: 1 !important;
+    }
 }
 
-.barlow-semibold {
-    font-weight: 600;
-    font-style: normal;
+.dialogLeft:hover::before,
+.dialogRight:hover::before {
+    color: #008dff !important;
 }
-
-.barlow-bold {
-    font-weight: 700;
-    font-style: normal;
-}
-
-.barlow-extrabold {
-    font-weight: 800;
-    font-style: normal;
-}
-
-.barlow-black {
-    font-weight: 900;
-    font-style: normal;
-}
-
-.barlow-thin-italic {
-    font-weight: 100;
-    font-style: italic;
-}
-
-.barlow-extralight-italic {
-    font-weight: 200;
-    font-style: italic;
-}
-
-.barlow-light-italic {
-    font-weight: 300;
-    font-style: italic;
-}
-
-.barlow-regular-italic {
-    font-weight: 400;
-    font-style: italic;
-}
-
-.barlow-medium-italic {
-    font-weight: 500;
-    font-style: italic;
-}
-
-.barlow-semibold-italic {
-    font-weight: 600;
-    font-style: italic;
-}
-
-.barlow-bold-italic {
-    font-weight: 700;
-    font-style: italic;
-}
-
-.barlow-extrabold-italic {
-    font-weight: 800;
-    font-style: italic;
-}
-
-.barlow-black-italic {
-    font-weight: 900;
-    font-style: italic;
-}
-
