@@ -16,7 +16,7 @@ export default function Header({onMenuHover, links}: HeaderProps) {
 
     return (
         <header className="py-3 max-w-maxW mx-auto">
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full py-3.5">
                 <Popover as="div" className="relative lg:hidden">
                     {({open}) => (
                         <>
