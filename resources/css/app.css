@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .slick-prev::before,
+    .slick-next::before {
+      @apply bg-[#1477c6] border border-white p-[0.9375rem];
+    }
+
+    .dialogLeft {
+      @apply z-[3] left-4;
+      &::before {
+        @apply bg-white text-black opacity-100;
+      }
+    }
+
+    .dialogRight {
+      @apply z-[3] right-12;
+      &::before {
+        @apply bg-white text-black opacity-100;
+      }
+    }
+
+
+  }
+
+  .slick-track {
+    height: fit-content !important;
+  }
 
 
 .barlow-thin {
@@ -94,31 +120,3 @@
     font-style: italic;
 }
 
-.slick-prev::before,
-.slick-next::before {
-    padding: 0.9375rem;
-    background-color: #1477c6 !important;
-    border-color: white;
-    border-width: 1px;
-    border-style: solid;
-}
-
-.dialogLeft {
-    z-index: 3;
-        left: 1rem !important;
-    &::before {
-        background-color: white !important;
-        color: black !important;
-        opacity: 1 !important;
-    }
-}
-
-.dialogRight {
-    z-index: 3;
-    right: 3rem !important;
-    &::before {
-        background-color: white !important;
-        color: black !important;
-        opacity: 1 !important;
-    }
-}
